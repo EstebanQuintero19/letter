@@ -103,9 +103,9 @@ body::before {
 
 .letter {
     width: 90vw;
-    max-width: 600px;
-    height: 70vh;
-    max-height: 500px;
+    max-width: 700px;
+    height: 80vh;
+    max-height: 650px;
     background: 
         linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%),
         linear-gradient(to bottom, #fffef9 0%, #fff8f0 50%, #fffbf5 100%);
@@ -154,7 +154,7 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 30px 40px;
     opacity: 0;
     transform: translateX(100%);
     transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -178,8 +178,8 @@ body::before {
 }
 
 h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
     color: #d65d47;
     font-weight: 700;
     font-family: 'Caveat', cursive;
@@ -187,17 +187,17 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
-    margin: 15px 0;
+    font-size: 1.6rem;
+    margin: 10px 0;
     color: #c55548;
     font-weight: 600;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 p {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    margin: 15px 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 10px 0;
     color: #6b5b52;
     font-weight: 400;
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
@@ -229,6 +229,16 @@ p {
     animation: fadeIn 1.5s ease-out 2s forwards;
 }
 
+.fade-in-extra {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out 3s forwards;
+}
+
+.fade-in-last {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out 4s forwards;
+}
+
 @keyframes heartBeat {
     0%, 100% {
         transform: scale(1);
@@ -250,7 +260,7 @@ p {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: 'Caveat', cursive;
 }
 
@@ -275,9 +285,9 @@ p {
 .hearts {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-    font-size: 2rem;
+    gap: 15px;
+    margin-top: 20px;
+    font-size: 1.5rem;
 }
 
 @keyframes floatHeart {
