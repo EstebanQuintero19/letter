@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="letter">
+            <!-- Slide 1 -->
+            <div class="slide active" id="slide1">
+                <div class="content">
+                    <h1 class="fade-in">Hey Cariño</h1>
+                    <p class="fade-in-delay">Tengo algo que decirte...</p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide" id="slide2">
+                <div class="content">
+                    <p class="fade-in">Sé que no soy muy bueno con las palabras...</p>
+                    <p class="fade-in-delay">y que escribir se me da un poco mal </p>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide" id="slide3">
+                <div class="content">
+                    <p class="fade-in">Pero lo que sí es...</p>
+                    <h2 class="fade-in-delay heart-beat">que me importas</h2>
+                    <h2 class="fade-in-more heart-beat">y me importas mucho ✨</h2>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide" id="slide4">
+                <div class="content">
+                    <p class="fade-in">Así que encontré una forma de decirte...</p>
+                    <h1 class="fade-in-delay love-text">¡Te amo! 💕</h1>
+                </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide" id="slide5">
+                <div class="content">
+                    <p class="fade-in">Y espero que no te sientas triste </p>
+                    <h1 class="fade-in-delay love-text scale-up">¡TE AMO! ❤️</h1>
+                    <div class="hearts">
+                        <span class="heart">💖</span>
+                        <span class="heart">💗</span>
+                        <span class="heart">💓</span>
+                        <span class="heart">💕</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+            <span class="dot" data-slide="4"></span>
+        </div>
+        
+        <!-- Music Control Button -->
+        <button class="music-control" id="musicControl" title="Reproducir música">
+            <span class="play-icon">🎵</span>
+            <span class="pause-icon" style="display: none;">⏸️</span>
+        </button>
+    </div>
+
+    <!-- Audio Player (hidden) -->
+    <audio id="background-music" loop>
+        <source src="song.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
