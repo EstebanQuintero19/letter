@@ -49,7 +49,7 @@ function toggleMusic() {
     }
 }
 
-// Function to show a specific slide
+// Function to show a specific slide with page-turning effect
 function showSlide(index) {
     // Remove active class from current slide
     slides[currentSlide].classList.remove('active');
@@ -59,12 +59,12 @@ function showSlide(index) {
     // Update current slide
     currentSlide = index;
     
-    // Add active class to new slide
+    // Add active class to new slide with timing for page effect
     setTimeout(() => {
         slides.forEach(slide => slide.classList.remove('exit'));
         slides[currentSlide].classList.add('active');
         dots[currentSlide].classList.add('active');
-    }, 100);
+    }, 150);
 }
 
 // Function to go to next slide
@@ -155,7 +155,7 @@ document.addEventListener('visibilitychange', () => {
 
 // Add sparkle effect on mouse move
 document.addEventListener('mousemove', (e) => {
-    if (Math.random() > 0.95) {
+    if (Math.random() > 0.92) {
         createSparkle(e.clientX, e.clientY);
     }
 });
@@ -166,16 +166,17 @@ function createSparkle(x, y) {
     sparkle.style.left = x + 'px';
     sparkle.style.top = y + 'px';
     sparkle.style.pointerEvents = 'none';
-    sparkle.style.fontSize = '20px';
+    sparkle.style.fontSize = Math.random() * 15 + 15 + 'px';
     sparkle.style.zIndex = '9999';
-    sparkle.textContent = ['✨', '💖', '⭐', '💫'][Math.floor(Math.random() * 4)];
-    sparkle.style.animation = 'sparkleFloat 1s ease-out forwards';
+    sparkle.textContent = ['✨', '💖', '⭐', '💫', '🌟', '💗', '💕'][Math.floor(Math.random() * 7)];
+    sparkle.style.animation = 'sparkleFloat 1.5s ease-out forwards';
+    sparkle.style.filter = 'drop-shadow(0 0 5px rgba(255, 255, 255, 0.8))';
     
     document.body.appendChild(sparkle);
     
     setTimeout(() => {
         sparkle.remove();
-    }, 1000);
+    }, 1500);
 }
 
 // Add sparkle animation to CSS dynamically
